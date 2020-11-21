@@ -1,0 +1,14 @@
+def sub(s):
+	l=[]
+	m=0
+	for i in s:
+		if i not in l:
+			l.append(i)
+		else:
+			m=max(m,len(l))
+			l.clear()
+			l.append(i)
+	m=max(m,len(l))
+	return m
+val=input()
+print(sub(val))
